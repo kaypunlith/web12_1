@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Radio Canada Big", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    width: 90%;
+    height: 70vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    width: 24%;
+    height: 100%;
+    border: 2px solid black;
+}
+.box-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    border-bottom: 2px solid black;
+}
+.box-img img{
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+}
+.stock{
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      width: 100px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+}
+.box-txt h3{
+    margin: 8px;
+}
+.box-txt h1{
+    margin: 8px;
+    color: blueviolet;
+}
+.box-txt .new_proice{
+    color: black;
+}
+.box-txt .old_price{
+    color:red;
+}
+.box-txt .btn{
+    display: flex;
+}
+.box-txt .btn .btn1{
+    border: 2px solid black;
+    width: 100px;
+    height: 40px;
+    margin-left: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-txt .btn .btn2{
+    border: 2px solid black;
+    width: 70px;
+    height: 40px;
+    margin-left: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-txt .btn .btn2 i{
+    font-size: 25px;
+    color: red;
+}
+.box-txt .btn .btn3{
+    border: 2px solid black;
+    width: 80px;
+    height: 40px;
+    margin-left: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

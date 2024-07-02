@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            position: relative;
+        }
+        header{
+            width: 100%;
+            /* height: 50px; */
+            background-color: red;
+        }
+        nav{
+         width: 80%;
+         height: 100%;
+         margin: auto;
+        }
+        nav ul{
+            display: flex;
+        }
+        nav ul li{
+            list-style-type: none;
+        }
+        nav ul li a{
+            display: block;
+            padding: 13px;
+            text-decoration: none;
+            color: white;
+            font-size: 22px;
+            
+        }
+        section{
+            position: relative;
+            width: 80%;
+            height:400px;
+     /* background-color: red; */
+            margin:0 auto;
+            margin-top: 10px;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .box{
+            width:24%;
+            height: 100%;
+            /* background-color:blue; */
+            margin-bottom: 10px;
+            box-shadow: 1px 1px 5px 0px black;
+        }
+        .box-img{
+            width: 100%;
+            height: 60%;
+            /* background-color: yellow; */
+        }
+        .box-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .box-txt{
+            width: 100%;
+            height: 40%;
+            /* background-color: rgb(144, 23, 23); */
+            padding: 10px;
+        }
+        .box-txt h2{
+            text-align: center;
+            font-size: 30px;
+        }
+        .box-txt button{
+            padding: 10px 15px;
+            margin-left: 60px;
+            background-color: blue;
+            border: none;
+            color: white;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .popup{
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            z-index: 1111;
+            background-color:rgba(0, 0, 0, 0.625);
+            left: 0;
+            top: 0;
+            display: none;
+           
+
+        }
+        
+        .frm{
+            width: 300px;
+            height: 300px;
+            background-color:white;
+            position: absolute;
+            padding: 20px;
+            left: 40%;
+            top: 30%;
+            box-shadow: 1px 1px 5px 0px black;
+        }
+        
+
+        .frm input{
+            width: 100%;
+            height: 35px;
+            border: 1px solid black;
+            padding: 8px;            
+        }
+        .frm button{
+            width: 80px;
+            border: none;
+            color: white;
+            height: 30px;
+            background-color: green;
+            margin-top: 20px;
+        }
+        .frm .closth{
+            position: absolute;
+            right: 0;
+            top:0;
+            width: 30px;
+            height:30px;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            color: white;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup">
+        <div class="frm">
+            <div class="closth">x</div>
+            <label for="">Enter code</label>
+            <input type="text" id="code" placeholder="Enter code">
+            <label for="">Enter name</label>
+            <input type="text" id="name" placeholder="Enter name">
+            <label for="">Enter qty</label>
+            <input type="text" id="qty" placeholder="Enter qty">
+            <label for="">Enter price</label>
+            <input type="text" id="price" placeholder="Enter pric">
+            <button type="button" id="btn_sub">Subnit</button>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <ul id="data">
+                
+            </ul>
+        </nav>
+    </header>
+    <section id="product_data">
+   
+     
+    </section>
+</body>
+<script>
+    function getMenu(){
+        const Menu=[
+        {
+            name:"Home",
+            color:"black",
+        },
+        {
+            name:"About",
+            color:"pink",
+        },
+        {
+            name:"Contac",
+            color:"yellow",
+        },
+        {
+            name:"Profile",
+            color:"green",
+        },
+    ]
+    var txt=""
+     Menu.forEach(M => {
+        txt+=`
+                <li>
+                     <a href="" style="color:${M.color}">${M.name}</a>
+                </li>
+        
+        `
+        document.getElementById("data").innerHTML=txt;
+     });
+    }
+    getMenu();
+
+    function getallprodcut(){
+       const Products=[
+        {
+            id:"1",
+            title:"Coffe1",
+            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium veniam cupiditate nesciunt eos quo!",
+            image:"/HTML/photo/coffee1.jpeg"
+        },
+        {
+            id:"2",
+            title:"Coffe2",
+            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium veniam cupiditate nesciunt eos quo!",
+            image:"/HTML/photo/coffee2.jpeg"
+        },
+        {
+            id:"3",
+            title:"Coffe3",
+            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium veniam cupiditate nesciunt eos quo!",
+            image:"/HTML/photo/coffee3.jpeg"
+        },
+        {
+            id:"4",
+            title:"Coffe4",
+            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium veniam cupiditate nesciunt eos quo!",
+            image:"/HTML/photo/coffee4.jpeg"
+        },
+        {
+            id:"5",
+            title:"Coffe5",
+            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium veniam cupiditate nesciunt eos quo!",
+            image:"/HTML/photo/coffee5.jpeg"
+        },
+        {
+            id:"6",
+            title:"Coffe6",
+            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium veniam cupiditate nesciunt eos quo!",
+            image:"/HTML/photo/coffee6.jpeg"
+        },
+        {
+            id:"7",
+            title:"Coffe3",
+            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium veniam cupiditate nesciunt eos quo!",
+            image:"/HTML/photo/coffee3.jpeg"
+        },
+        {
+            id:"8",
+            title:"Coffe5",
+            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium veniam cupiditate nesciunt eos quo!",
+            image:"/HTML/photo/coffee5.jpeg"
+        }
+       ]
+       var txt1=""
+       for (const pro of Products) {
+         txt1+=`
+         <div class="box">
+            <div class="box-img">
+                <img src="${pro.image}" alt="">
+            </div>
+            <div class="box-txt">
+                <h2>${pro.title}</h2>
+                <p>${pro.description}</p>
+                <button type="button" id="btn_add">Add to Card</button>
+            </div>
+        </div>
+            
+         
+         `
+         document.getElementById("product_data").innerHTML=txt1;
+       }
+        
+    }
+    getallprodcut();    
+    var popup=document.querySelector(".popup");
+    var closth=document.querySelector(".closth");
+    function Order(){
+     var btnall=document.querySelectorAll("#btn_add");
+       btnall.forEach((el,index)=>{
+        el.addEventListener("click",function(){
+          popup.style.display="block";
+        })
+       })
+       closth.addEventListener("click",function(){
+        popup.style.display="none";
+       })
+      
+    }
+    Order();
+     
+</script>
+</html>

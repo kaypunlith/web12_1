@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body>
+    <label for="">Enter number 1</label><br>
+    <input type="text" id="num1"><br>
+    <label for="">Enter number 2</label><br>
+    <input type="text" id="num2"><br>
+    <label for="">Result</label><br>
+    <input type="text" id="rs"><br>
+     <div style="display: flex; margin-top: 10px;">
+        <input type="button" value="+" id="btn"><br>
+        <input type="button" value="-" id="btn"><br>
+        <input type="button" value="*" id="btn"><br>
+        <input type="button" value="/" id="btn"><br>
+     </div>
+</body>
+<script>
+      var num1 =document.getElementById("num1");
+      var num2 =document.getElementById("num2");
+      var rs=document.getElementById("rs");
+      var sum=0;
+    document.getElementById("btn").onclick=function(){
+       sum=Number(num1.value)+Number(num2.value);
+       rs.value=sum;
+    };
+    
+</script>
+</html>

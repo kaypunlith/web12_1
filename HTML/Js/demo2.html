@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="500px" style="text-align: center;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>name</th>
+                <th>Gender</th>
+                <th>Sary</th>
+            </tr>
+        </thead>
+        <tbody id="tbl_dta">
+            <!-- <tr>
+                <td>1</td>
+                <td>koko</td>
+                <td>Male</td>
+                <td>500</td>
+            </tr> -->
+            
+        </tbody>
+    </table>
+</body>
+<script>
+   
+    const person=[
+        {
+            id:1,
+            name:"sok",
+            gender:"Male",
+            salary:500
+        },
+        {
+            id:2,
+            name:"vanna",
+            gender:"Male",
+            salary:500
+        },
+        {
+            id:3,
+            name:"sakda",
+            gender:"Male",
+            salary:400
+        },
+     
+    ]
+     var txt=""
+    person.forEach(per => {
+      txt+=`
+           <tr>
+                <td>${per.id}</td>
+                <td>${per.name}</td>
+                <td>${per.gender}</td>
+                <td>${per.salary}</td>
+            </tr>
+      
+      `
+   
+      document.getElementById("tbl_dta").innerHTML=txt;
+
+    });
+
+    
+   
+</script>
+</html>

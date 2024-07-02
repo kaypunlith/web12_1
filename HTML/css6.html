@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 900px;
+            height: 700px;
+            background-color: red;
+            margin: auto;
+            padding:20px;
+        }
+        .navbar{
+            width: 100%;
+            height: 13%;
+            background-color: blue;
+        }
+        .body{
+            width: 100%;
+            height: 70%;
+            /* background-color: yellow; */
+            margin-top: 2%;
+           
+        }
+        .body-left{
+          width: 30%;
+          height: 100%;
+          background-color: pink;
+          float: left;
+        }
+        .body-right{
+            width: 68%;
+            height: 100%;
+            background-color:greenyellow;
+            
+            float: left;
+            margin-left: 2%;
+
+        }
+        .right-top{
+            width: 100%;
+            height: 50%;
+            /* background-color:gold; */
+        }
+        .right-buttom{
+            width: 100%;
+            height: 50%;
+            background-color: rgb(0, 255, 102);
+            display: flex;
+            justify-content: space-between;
+        }
+        .box-img{
+            width: 32%;
+            height: 100%;
+            background-color: black;
+        }
+        .box-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .footer{
+            width: 100%;
+            height: 13%;
+            background-color: green;
+            margin-top: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar"></div>
+        <div class="body">
+            <div class="body-left"></div>
+            <div class="body-right">
+                <div class="right-top"></div>
+                <div class="right-buttom">
+                    <div class="box-img">
+                        <img src="./img/pic1.webp" alt="">
+                    </div>
+                    <div class="box-img">
+                        <img src="./img/pic2.jpeg" alt="">
+                    </div>
+                    <div class="box-img">
+                        <img src="./img/pic3.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="footer"></div>
+    </div>
+
+</body>
+</html>

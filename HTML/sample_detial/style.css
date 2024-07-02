@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    /* height: 50px; */
+    background-color: green;
+}
+header nav{
+    width:70%;
+    height: 100%;
+    /* background-color: yellow; */
+    margin: auto;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li{
+    list-style-type: none;
+}
+header nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 14px;
+    color: #eee;
+}
+section{
+    width: 70%;
+    height: 400px;
+    background-color: black;
+    margin: auto;
+    display: flex;
+    margin-top: 8px;
+}
+section .list{
+    width: 29%;
+    height: 100%;
+    background-color: red;
+    margin-right: 1%;
+    padding: 13px;
+}
+section .list ul li a{
+    display: block;
+    justify-content: space-around;
+    align-items: center;
+}
+section .list ul li{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+section .list ul li a{
+    text-decoration: none;
+    color: white;
+    display: 22px;
+    display: block;
+}
+section .list ul li a span{
+    margin-left: 40px;
+}
+section .list ul li a i{
+    margin-left: 120px;
+}
+section .slid{
+    width: 70%;
+    height: 100%;
+    background-color: palevioletred;
+}
+section .slid .swiper{
+    width:100%;
+    height: 100%;
+}
+section .slid .swiper-slide img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+

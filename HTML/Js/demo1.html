@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    
+</body>
+<script>
+    alert("Hello js");
+    confirm("Hello comfrim");
+    document.write("Hello js");
+    console.log("Hello js");
+
+     const a=100;
+     var b=12.30;
+     var txt="ETEC"; 
+     var txt1='A';
+     document.write("number="+a+"<br>");
+     document.write("number ="+b+"<br>");
+     document.write("text="+txt+"<br>");
+     document.write("text 1="+txt1);
+
+    var a=prompt("Enter value a=");
+    var b=prompt("Please Enter b=");
+    var sum=Number(a)+Number(b);
+
+    document.write("Value a="+a+"<br>");
+    document.write("value B="+b+"<br>");
+    document.write("sum="+sum);
+
+    //non retrun non paramet
+    function sayhello(){
+        document.write("Hello my name is js");
+    }
+    function Login(email,pass){
+          if(email=='Admin.com'){
+               if(pass==123){
+                swal("Logon in success!", "You clicked the button!", "success")
+               }else{
+                swal("Error password!", "You clicked the button!", "success")
+               }
+          }else{
+             swal("Error email!", "You clicked the button!", "success")
+          }
+    }
+      
+    // sayhello();
+    Login("Admin.com",13);     
+</script>
+</html>

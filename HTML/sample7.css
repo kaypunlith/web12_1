@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Menu{
+    width: 100%;
+    /* height: 60px; */
+    background-color: red;
+}
+.list_menu{
+    width: 80%;
+    height: 100%;
+    /* background-color: blue; */
+    margin: 0 auto;
+    display: flex;
+    color: white;
+ 
+    justify-content: space-between;
+}
+.list_menu .sub_item ul{
+    display: flex;
+}
+.list_menu .sub_item ul li{
+    list-style-type: none;
+}
+.list_menu .sub_item ul li a{
+    display: block;
+    padding: 13px;
+color: white;
+font-size: 22px;
+text-decoration: none;
+}
+.search{
+    width: 300px;
+    height:40px;
+    /* background-color: black; */
+    margin-top: 6px;
+    display: flex;
+    border-radius: 4px;
+    border: 2px solid white;
+}
+.btn-input{
+    width: 70%;
+    height: 100%;
+/* background-color: red; */
+}
+.btn-input input{
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 22px;
+    outline: none;
+    border: none;
+   background: none;
+   margin-left: 6px;
+   
+} 
+.btn-input input::placeholder{
+    color: white;
+}
+
+.btn-search{
+    background-color: brown;
+    width: 30%;
+    height: 100%;
+}
+.btn-search button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(44, 7, 255);
+}
